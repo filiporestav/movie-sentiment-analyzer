@@ -4,6 +4,8 @@ Detta projekt består av Python-program för sentimentanalys av omdömen med oli
 
 ## Ladda ned den nödvändiga datan
 
+Om du har filen "data" i mappen hoppa till nästa steg, annars gör enligt följande steg:
+
 Innan du börjar köra programmen måste det ha tillgång till datan. För att hämta datan, gå till länken: https://ai.stanford.edu/~amaas/data/sentiment/ och tryck på "Large Movie Review Dataset v1.0". Nu kommer en zip-fil att laddas ned.
 
 I zip-filen finns det en mapp som heter "acllmdb". Flytta denna mapp inuti mappen där du har samlat projektet, det vill säga tillsammans med alla Python-program. Döp sedan om mappen från "acllmdb" till "data".

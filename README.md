@@ -52,37 +52,37 @@ python -m nltk.downloader punkt words stopwords
 
 Nu ska samtliga programbibliotek som krävs för programmen vara installerade, och de kan nu köras genom den skapade virtuella omgivningen. Om det förmodan skulle saknas ett programbibliotek, så kan du installera det genom att i din virtuella omgivning skriva:
 
-pip install <programbibliotek>
+pip install "programbibliotek"
 
 ## Tillgängliga modeller
 
 ### 1. Naive Bayes-klassificerare med TF-IDF
 
 - **Fil:** `naive_bayes_tfidf.py`
-- **Beskrivning:** Implementerar en Naive Bayes-klassificerare med TF-IDF-funktioner.
+- **Beskrivning:** Implementerar en Naive Bayes-klassificerare med TF-IDF.
 - **Körs genom:** python naive_bayes_tfidf.py
 - **Ytterligare funktioner:** Lemmatisering, stemming, ordens polaritetsanalys
 
 ### 2. Support Vector Machine (SVM) med TF-IDF
 
 - **Fil:** `support_vector_machine.py`
-- **Beskrivning:** Använder en Support Vector Machine (SVM)-klassificerare med TF-IDF-funktioner.
+- **Beskrivning:** Använder en Support Vector Machine (SVM)-klassificerare med TF-IDF.
 - **Körs genom:** python support_vector_machine.py
-- **Ytterligare funktioner:** Andel av datasetet att träna på (justeras i parametern create_dataframe-metoden)
+- **Ytterligare funktioner:** Lemmatisering, stemming, andel av datasetet att träna på (justeras i parametern create_dataframe-metoden)
 
 ### 3. eXtreme Gradient Boosting (XGBoost) med TF-IDF
 
 - **Fil:** `xg_boost.py`
-- **Beskrivning:** Implementerar en XGBoost-klassificerare med TF-IDF-funktioner.
+- **Beskrivning:** Implementerar en XGBoost-klassificerare med TF-IDF.
 - **Körs genom:** python xg_boost.py
-- **Ytterligare funktioner:** Andel av datasetet att träna på (justeras i parametern create_dataframe-metoden)
+- **Ytterligare funktioner:** Lemmatisering, stemming, andel av datasetet att träna på (justeras i parametern create_dataframe-metoden)
 
 ### 4. Logistisk regression med Word2vec
 
 - **Fil:** `logistic_regression_word2vec.py`
 - **Beskrivning:** Implementerar en logistisk regressionsklassificerare med Word2vec.
 - **Körs genom:** logistic_regression_word2vec.py
-- **Additional Features:** Andel av datasetet att träna på (justeras i parametern create_dataframe-metoden)
+- **Ytterligare funktioner:** Lemmatisering, stemming, andel av datasetet att träna på (justeras i parametern create_dataframe-metoden)
 
 ## Steg 4. Exekvera programmen
 Samtliga program använder samma tränings- och testdata, med undantag för Naive Bayes som också testar modellen på data från Amazon. För att exekvera programmen skriver man alltså i terminalen:
@@ -90,16 +90,6 @@ python_program_namn.py, varvid det valda programmet exekveras.
 
 Vill man justera parametrarna (t.ex. stemming eller lemmatisering), kan detta göras i main-funktionen som parameter till klassificeraren. Övriga parametrar kan justeras vid skapandet av TfidfVectorizer-objektet respektive Word2vec-objektet, samt vid skapandet av LogisticRegression-, Naive Bayes-, Support Vector Machine- och XGBoost-objektet.
 
-## Referenser
+## Datakälla
 
-@InProceedings{maas-EtAl:2011:ACL-HLT2011,
-  author    = {Maas, Andrew L.  and  Daly, Raymond E.  and  Pham, Peter T.  and  Huang, Dan  and  Ng, Andrew Y.  and  Potts, Christopher},
-  title     = {Learning Word Vectors for Sentiment Analysis},
-  booktitle = {Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies},
-  month     = {June},
-  year      = {2011},
-  address   = {Portland, Oregon, USA},
-  publisher = {Association for Computational Linguistics},
-  pages     = {142--150},
-  url       = {http://www.aclweb.org/anthology/P11-1015}
-}
+Maas, A. L., Daly, R. E., Pham, P. T., Huang, D., Ng, A. Y., & Potts, C. (2011). Learning Word Vectors for Sentiment Analysis. I Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies (s. 142-150). Association for Computational Linguistics. http://www.aclweb.org/anthology/P11-1015

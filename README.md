@@ -2,7 +2,13 @@
 
 Detta projekt består av Python-program för sentimentanalys av omdömen med olika maskininlärningsmodeller. Varje modell syftar till att förutsäga om en given text är en positiv eller negativ recension.
 
-## Ladda ned den nödvändiga datan
+## Förutsättningar
+
+Se till att du har Python installerat på din dator. Detta kan kontrolleras genom att i terminalfönstret skriva:
+
+python --version
+
+## Steg 1. Ladda ned den nödvändiga datan
 
 Om du har filen "data" i mappen hoppa till nästa steg, annars gör enligt följande steg:
 
@@ -14,13 +20,7 @@ För att kunna testa modellerna på annan data används även recensioner från 
 
 När du laddat ned Amazon-datan som en zip-fil, öppna zip-filen och flytta .json-filen till undermappen "test" i mappen "data".
 
-## Förutsättningar
-
-Se till att du har Python installerat på din dator. Detta kan kontrolleras genom att i terminalfönstret skriva:
-
-python --version
-
-## Skapa en virtuell omgivning för körning av filerna.
+## Steg 2. Skapa en virtuell omgivning för körning av filerna.
 För att programmen ska fungera korrekt och undvika konflikter med befintliga programbibliotek på din dator, behöver vi skapa en virtuell omgivning specifikt för detta projekt.
 
 Använd kommandot cd för att navigera till mappen där samtliga program och data-mappen är samlad, som exempelvis har namnet "movie-sentiment-analyzer".
@@ -41,7 +41,7 @@ Observera att "(my_venv)" kommer att visas framför den vanliga terminalprompten
 
 Kom ihåg att varje gång du öppnar ett nytt terminalfönster för att köra programmen, behöver du gå till mappen "sentiment-movie-analyzer" och aktivera din virtuella omgivning.
 
-## Installera programbibliotek
+## Steg 3. Installera programbibliotek
 Ladda nu ner de programbibliotek som krävs för att köra programmen. Detta görs genom att i terminalen gå till din virtuella omgivning-mapp (my_venv i detta fall), aktivera den virtuella omgivningen och sedan i terminalen skriva:
 
 pip install -r requirements.txt
@@ -84,13 +84,13 @@ pip install <programbibliotek>
 - **Körs genom:** logistic_regression_word2vec.py
 - **Additional Features:** Andel av datasetet att träna på (justeras i parametern create_dataframe-metoden)
 
-## Exekvera programmen
+## Steg 4. Exekvera programmen
 Samtliga program använder samma tränings- och testdata, med undantag för Naive Bayes som också testar modellen på data från Amazon. För att exekvera programmen skriver man alltså i terminalen:
 python_program_namn.py, varvid det valda programmet exekveras.
 
 Vill man justera parametrarna (t.ex. stemming eller lemmatisering), kan detta göras i main-funktionen som parameter till klassificeraren. Övriga parametrar kan justeras vid skapandet av TfidfVectorizer-objektet respektive Word2vec-objektet, samt vid skapandet av LogisticRegression-, Naive Bayes-, Support Vector Machine- och XGBoost-objektet.
 
-## Källor
+## Referenser
 
 @InProceedings{maas-EtAl:2011:ACL-HLT2011,
   author    = {Maas, Andrew L.  and  Daly, Raymond E.  and  Pham, Peter T.  and  Huang, Dan  and  Ng, Andrew Y.  and  Potts, Christopher},
